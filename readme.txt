@@ -1,4 +1,4 @@
-=== PluginReplace ===
+=== {PLUGIN_NAME} ===
 Contributors: Thomas Deneulin
 Tags: gutenberg
 Requires at least: 4.5

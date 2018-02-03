@@ -104,6 +104,33 @@ class DirectoryHelper  {
         endif;
     }
 
+    public static function renameFilesInDir($dir, $search, $replace, $function_exec = ''){
+        $files = array_diff(scandir($dir), array('.','..')); 
+
+        foreach ($files as $file): 
+            if(is_dir("$dir/$file")):
+                DirectoryHelper::renameFilesInDir("$dir/$file",$search,$replace,$function_exec);
+            else:
+            
+                DirectoryHelper::renameFile("$dir/$file", $search, $replace, $function_exec);
+            
+            endif;
+        endforeach;
+   
+    }
+
+    public static function renameFile($file, $search, $replace,$function_exec = ''){
+
+
+        if(!empty($function_exec)):
+            $newFile =  str_replace($search, call_user_func($function_exec,$replace), $file);
+        else:
+            $newFile =  str_replace($search, $replace, $file);
+        endif;
+        var_dump($file, $newFile);
+        // rename($file, $newFile);
+    }
+
 
 }
 

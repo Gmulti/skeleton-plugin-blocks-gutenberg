@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: PluginReplace - skeleton-plugin-blocks-gutenberg
+ * Plugin Name: {PLUGIN_NAME}
  * Description: Skeleton plugin blocks gutenberg
  * Author: Thomas Deneulin
  * Author URI: https://essential-dev-skills.com
@@ -19,7 +19,7 @@ require_once dirname(__FILE__) . "/vendor/autoload.php";
 
 use PluginReplaceGutenberg\PluginReplaceEnqueue;
 
-define("PLUGIN_REPLACE", "pluginname");
+define("PLUGIN_REPLACE", "{PLUGIN_SLUG}");
 define("PLUGIN_REPLACE_VERSION", "{VERSION}");
 define("PLUGIN_REPLACE_BASE_FILE", plugin_basename( __FILE__ ));
 define("PLUGIN_REPLACE_PATH", plugin_dir_path( __FILE__ ));
