@@ -8,8 +8,20 @@
 
 ## Getting started 🚀 
 
-Install `morphism` using npm.
+Install `skeleton-plugin-blocks-gutenberg`
 
+
+```sh
+cd wp-content/plugins
+git clone https://github.com/Gmulti/skeleton-plugin-blocks-gutenberg.git
+```
+
+Prepare your plugin
+
+```sh
+cd wp-content/plugins/skeleton-plugin-blocks-gutenberg
+php scripts/prepare-plugin.php -n "Plugin Name"
+```
 
 
 ## License
