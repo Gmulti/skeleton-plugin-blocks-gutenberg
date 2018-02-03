@@ -127,8 +127,8 @@ class DirectoryHelper  {
         else:
             $newFile =  str_replace($search, $replace, $file);
         endif;
-        var_dump($file, $newFile);
-        // rename($file, $newFile);
+
+        rename($file, $newFile);
     }
 
 
