@@ -1,0 +1,16 @@
+{
+    "name": "skeleton-plugin-blocks-gutenberg",
+    "type": "project",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Thomas DENEULIN",
+            "email": "thomas@delipress.io"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "PluginReplaceGutenberg\\": "src"
+        }
+    }
+}
