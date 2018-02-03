@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "dependencies": {
         "lodash": "^4.17.4",
+        "promise": "^8.0.1",
         "prop-types": "^15.6.0",
         "react": "^16.2.0",
         "react-dom": "^16.2.0",
@@ -35,7 +36,8 @@
         "postcss-loader": "2.0.6",
         "sass-brunch": "^2.10.4",
         "sass-loader": "^6.0.6",
-        "uglify-js-brunch": "^2.10.0"
+        "uglify-js-brunch": "^2.10.0",
+        "whatwg-fetch": "^2.0.3"
     },
     "scripts": {
         "test": "node scripts/test.js --env=jsdom"
