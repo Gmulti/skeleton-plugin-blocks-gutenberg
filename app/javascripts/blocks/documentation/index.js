@@ -5,7 +5,7 @@ import CustomBlock from "./components/CustomBlock"
 
 registerBlockType('guten/block-documentation', {
     title: __('Documentation'),
-    icon: 'shield',
+    icon: 'admin-page',
     category: 'common',
     keywords: [
         __('Documentation')

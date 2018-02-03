@@ -5,7 +5,7 @@ import styles from "./index.scss"
 
 registerBlockType( 'guten/block-hello', {
 	title: __( 'Hello' ),
-	icon: 'shield',
+	icon: 'admin-post',
 	category: 'common',
 	keywords: [
 		__( 'Hello example' )
