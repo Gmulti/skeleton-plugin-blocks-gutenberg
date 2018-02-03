@@ -39,8 +39,8 @@ foreach ($directories as $key => $dir) {
 foreach ($files as $key => $file) {
     DirectoryHelper::replaceStringInFile($file, "PluginReplace", $pluginNoSpace);
     DirectoryHelper::replaceStringInFile($file, 'PLUGIN_REPLACE', $pluginConst);
-    DirectoryHelper::replaceStringInFile($dir, '{PLUGIN_SLUG}', $pluginSlug);
-    DirectoryHelper::replaceStringInFile($dir, '{PLUGIN_NAME}', $pluginName);
+    DirectoryHelper::replaceStringInFile($file, '{PLUGIN_SLUG}', $pluginSlug);
+    DirectoryHelper::replaceStringInFile($file, '{PLUGIN_NAME}', $pluginName);
 }
 
 DirectoryHelper::renameFile("plugin.php", "plugin", $pluginSlug);
