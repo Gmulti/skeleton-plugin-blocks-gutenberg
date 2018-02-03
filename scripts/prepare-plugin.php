@@ -28,16 +28,26 @@ $pluginSlug     = strtolower(str_replace(" ", "-", $pluginName));
 $pluginConst    = strtoupper(str_replace(" ", "_", $pluginName));
 $pluginNoSpace  = str_replace(" ", "", $pluginName);
 
+echo $colors->getColoredString("Replace files and strings", "green");
 foreach ($directories as $key => $dir) {
     DirectoryHelper::replaceStringInFiles($dir, "PluginReplace", $pluginNoSpace);
     DirectoryHelper::replaceStringInFiles($dir, 'PLUGIN_REPLACE', $pluginConst);
+    DirectoryHelper::replaceStringInFiles($dir, '{PLUGIN_SLUG}', $pluginSlug);
+    DirectoryHelper::replaceStringInFiles($dir, '{PLUGIN_NAME}', $pluginName);
 }
 
 foreach ($files as $key => $file) {
     DirectoryHelper::replaceStringInFile($file, "PluginReplace", $pluginNoSpace);
     DirectoryHelper::replaceStringInFile($file, 'PLUGIN_REPLACE', $pluginConst);
+    DirectoryHelper::replaceStringInFile($dir, '{PLUGIN_SLUG}', $pluginSlug);
+    DirectoryHelper::replaceStringInFile($dir, '{PLUGIN_NAME}', $pluginName);
 }
 
 DirectoryHelper::renameFile("plugin.php", "plugin", $pluginSlug);
 DirectoryHelper::renameFilesInDir("src", "PluginReplace", $pluginNoSpace);
+
+echo $colors->getColoredString("Composer update", "green");
+exec("composer update");
+echo $colors->getColoredString("Yarn install", "green");
+exec("yarn");
 

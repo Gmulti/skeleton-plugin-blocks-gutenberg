@@ -71,19 +71,7 @@ class DirectoryHelper  {
             if(is_dir("$dir/$file")):
                 DirectoryHelper::replaceStringInFiles("$dir/$file",$search,$replace,$function_exec);
             else:
-
-                $fileModification = @file_get_contents("$dir/$file");
-                if($fileModification !== false):
-
-                    // Callback
-                    if(!empty($function_exec)):
-                        $newFile =  str_replace($search, call_user_func($function_exec,$replace), $fileModification);
-                    else:
-                        $newFile =  str_replace($search, $replace, $fileModification);
-                    endif;
-                    
-                    file_put_contents("$dir/$file", $newFile);
-                endif;
+                DirectoryHelper::replaceStringInFile("$dir/$file", $search, $replace, $function_exec);
             endif;
         endforeach;
    
