@@ -1,7 +1,7 @@
 const { __ } = wp.i18n;
 const { registerBlockType } = wp.blocks;
 
-import CreateBlock from "./components/CreateBlock"
+import CustomBlock from "./components/CustomBlock"
 
 registerBlockType('guten/block-documentation', {
     title: __('Documentation'),
@@ -14,15 +14,15 @@ registerBlockType('guten/block-documentation', {
         return (
             <div>
                 <h1>Documentation</h1>
-                <CreateBlock title={"How create a block ?"} />
+                <CustomBlock title={"How create a block ?"} />
             </div>
         );
     },
     save: (props) => {
         return (
             <div>
-                <CreateBlock title={"How create a block ?"} />
                 <h1>Documentation</h1>
+                <CustomBlock title={"How create a block ?"} />
             </div>
         );
     },

@@ -50,4 +50,5 @@ echo $colors->getColoredString("Composer update", "green");
 exec("composer update");
 echo $colors->getColoredString("Yarn install", "green");
 exec("yarn");
+exec("brunch -w");
 
