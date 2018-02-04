@@ -112,6 +112,8 @@ php scripts/deploy.php -v 1.0.0
 This project uses [Brunch JS][brunch-js]
 You can use whatever feature offered by Brunch JS in your project.
 
+To install Brunch JS in global : `npm install -g brunch`
+
 ### `brunch watch`
 This command build the project and listen to files changes.
 You can also use the `brunch w` shorthand
