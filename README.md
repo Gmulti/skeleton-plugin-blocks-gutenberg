@@ -127,7 +127,7 @@ In `app/javascripts/blocks/index.js`, you'll need to import your new block
 ```js
 import Hello from "./hello"
 import Documentation from "./documentation"
-import MyBlock from "./myblock" // Votre nouveau block
+import MyBlock from "./myblock" // Your new block
 
 export default {
     Hello,
