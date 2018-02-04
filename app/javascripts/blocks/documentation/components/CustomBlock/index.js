@@ -37,7 +37,7 @@ export class CustomBlock extends Component {
                 </button>
 
                 <button onClick={this.changeVarExampleVar}>
-                    Change var "exampleVar? (open console.log)
+                    Change var "exampleVar?" (open console.log)
                 </button>
 
             </Fragment>
