@@ -10,18 +10,26 @@
 
 Install `skeleton-plugin-blocks-gutenberg`
 
-
 ```sh
 cd wp-content/plugins
 git clone https://github.com/Gmulti/skeleton-plugin-blocks-gutenberg.git
 ```
 
-Prepare your plugin
+**Warning:** The `public` and `vendor` folders do not exist if you do not prepare the plugin.
+
+Prepare your plugin.
 
 ```sh
 cd wp-content/plugins/skeleton-plugin-blocks-gutenberg
 php scripts/prepare-plugin.php -n "Plugin Name"
 ```
+
+**You do not want to use this script?**
+
+Use :
+* `composer update` (create `vendor` directory)
+* `npm install` or `yarn` (install `node_modules`)
+* `brunch w` (compile files and create `public` directory)
 
 ## Plugin architecture
 
