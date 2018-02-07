@@ -45,10 +45,11 @@ foreach ($files as $key => $file) {
 
 DirectoryHelper::renameFile("plugin.php", "plugin", $pluginSlug);
 DirectoryHelper::renameFilesInDir("src", "PluginReplace", $pluginNoSpace);
+DirectoryHelper::replaceStringInFile("scripts/deploy.php", 'plugin.php', $pluginSlug);
 
 echo $colors->getColoredString("Composer update", "green");
 exec("composer update");
 echo $colors->getColoredString("Yarn install", "green");
 exec("yarn");
-exec("brunch -w");
+exec("brunch w");
 
